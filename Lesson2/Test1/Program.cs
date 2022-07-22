@@ -1,4 +1,4 @@
-﻿int Max(int arg1, int arg2, int arg3)
+﻿int Max(int arg1, int arg2, int arg3) //Function Max created
 {
     int result = arg1;
     if(arg2 > result) result = arg2;
@@ -12,13 +12,14 @@ int c1 = 39;
 int a2 = 12;
 int b2 = 23;
 int c2 = 33;
-int a3 = 199;
+int a3 = 19;
 int b3 = 23;
 int c3 = 33;
 
-int max1 = Max(a1, b1, c1);
-int max2 = Max(a2, b2, c2);
-int max3 = Max(a3, b3, c3);
-int max = Max(max1, max2, max3);
+//int max1 = Max(a1, b1, c1); //Use of function Max
+//int max2 = Max(a2, b2, c2);
+//int max3 = Max(a3, b3, c3);
+
+int max = Max(Max(a1, b1, c1), Max(a2, b2, c2), Max(a3, b3, c3)); // Function in function
 
 Console.Write(max);
