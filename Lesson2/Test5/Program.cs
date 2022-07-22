@@ -18,12 +18,11 @@ void PrintArray(int[] col)
         position++;
     }
 }
-
 int IndexOf(int[] collection, int find) // Поиск переменной find в collection
 {
     int count = collection.Length;
     int index = 0;
-    int position = 0;
+    int position = -1; //принято выводить -1, если элемент не найден
 
     while (index < count)
     {
@@ -45,6 +44,6 @@ PrintArray(array); //Printed
 
 Console.WriteLine();
 
-int pos = IndexOf(array, 5);
+int pos = IndexOf(array, 56);
 
 Console.WriteLine(pos); // write index of element "find" in collection
