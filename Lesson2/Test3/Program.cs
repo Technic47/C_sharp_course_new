@@ -1,4 +1,4 @@
-﻿int[]array = {1,2,3,4,5,4,7,4,9};
+﻿nt[]array = {1,2,3,4,5,4,7,4,9};
 
 int n = array.Length; //Length of array
 
@@ -14,4 +14,4 @@ while (index<n)
         break;
     }
     index++;
-}
+}i
