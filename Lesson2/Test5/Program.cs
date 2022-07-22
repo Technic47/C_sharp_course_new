@@ -30,6 +30,7 @@ int IndexOf(int[] collection, int find) // Поиск переменной find 
         if(collection[index] == find)
         {
             position = index;
+            break; // Stop at first match
         }
         index++;
     }
