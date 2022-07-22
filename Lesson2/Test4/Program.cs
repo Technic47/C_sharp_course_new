@@ -20,5 +20,5 @@ void PrintArray(int[] col)
 }
 int[]array = new int[10]; //Create new array with 10 int numbers [0,0,0,0,0,0,0,0,0,0]
 
-FillArray(array);
-PrintArray(array);
+FillArray(array); //Filled
+PrintArray(array); //Printed

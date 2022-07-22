@@ -18,7 +18,32 @@ void PrintArray(int[] col)
         position++;
     }
 }
+
+int IndexOf(int[] collection, int find)
+{
+    int count = collection.Length;
+    int index = 0;
+    int position = 0;
+
+    while (index < count)
+    {
+        if(collection[index] == find)
+        {
+            position = index;
+        }
+        index++;
+    }
+    return position;
+    
+}
+
 int[]array = new int[10]; //Create new array with 10 int numbers [0,0,0,0,0,0,0,0,0,0]
 
 FillArray(array); //Filled
 PrintArray(array); //Printed
+
+Console.WriteLine();
+
+int pos = IndexOf(array, 5);
+
+Console.WriteLine(pos);
