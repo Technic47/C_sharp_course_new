@@ -1,6 +1,6 @@
 ﻿string text = "I checked this message for stupidity"
 +" and found out that"
-+" I am not abele to read.";
++" I am not able to read.";
 
 // string 5 = "text" => "0123" как массив
 //s[3] => t
@@ -20,4 +20,7 @@ string Replace(string text, char oldW, char newW)
 }
 
 string newText = Replace(text, ' ', '|');
+Console.WriteLine(newText);
+Console.WriteLine();
+newText = Replace(text, 'c', 'C');
 Console.WriteLine(newText);
