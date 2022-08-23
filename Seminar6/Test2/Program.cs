@@ -15,13 +15,10 @@ int b = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Number C:");
 int c = int.Parse(Console.ReadLine()!);
 
-int Check(int x, int y)
+bool ExistTriangle(int a, int b, int c)
 {
-    int c = x + y;
-    return c;
+    return a < b + c && b < a + c && c < a + b;
 }
-if (a < Check(b, c) && b < Check(a, c) && c < Check(a, b))
-    {
-        Console.WriteLine($"Triangle can exist!");
-    }
+bool result = ExistTriangle(a, b, c);
+if (result) Console.WriteLine($"Triangle can exist!");
 else Console.WriteLine($"Triangle can not exist!");

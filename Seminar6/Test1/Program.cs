@@ -1,5 +1,9 @@
-﻿int size = 10;
+﻿// Переворот массива
+
+int size = 10;
 int[] array = new int[size];
+
+//Array.Reverse(array); // Встроенный функционал
 
 for (int i = 0; i < size; i++)
 {
@@ -18,9 +22,9 @@ int[] Reverse(int[] t_array) // переворот массива через п�
     return tempArray;
 }
 
-void Reverse2 (int[] t_Array) // переворот изначального, который не сохраняется.
+void Reverse2(int[] t_Array) // переворот изначального, который не сохраняется.
 {
-    for (int i = 0; i < (t_Array.Length/2); i++)
+    for (int i = 0; i < (t_Array.Length / 2); i++)
     {
         int j = t_Array.Length - i - 1;
         int temp = t_Array[i];
@@ -30,15 +34,22 @@ void Reverse2 (int[] t_Array) // переворот изначального, к
     return;
 }
 
-int[]newArray = Reverse(array);
-Console.WriteLine($"\nReverse: ");
-for  (int i = 0; i < size; i++)
+void PrintArray(int[] array)
 {
-    Console.Write($"{newArray[i]} ");
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
 }
+
+int[] newArray = Reverse(array);
+Console.WriteLine($"\nReverse: ");
+PrintArray(newArray);
+
 Reverse2(array);
 Console.WriteLine($"\nReverse2: ");
-for  (int i = 0; i < size; i++)
-{
-    Console.Write($"{array[i]} ");
-}
+PrintArray(array);
+
+Console.WriteLine($"\nReverseBuildIn: ");
+Array.Reverse(array);
+PrintArray(array);
