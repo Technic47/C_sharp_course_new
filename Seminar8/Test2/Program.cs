@@ -23,13 +23,10 @@ for (int i = 0; i < m; i++)
 
 void PrintArray(double[,] array)
 {
+    Console.WriteLine();
     for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            Console.Write(string.Format("{0:f} ", array[i, j])); // не изменяя число ограничиваем вывод
-
-        }
+        for (int j = 0; j < n; j++) Console.Write(string.Format("{0,6:0.##}  ", array[i, j]));
         Console.WriteLine();
     }
 }
