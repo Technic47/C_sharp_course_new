@@ -6,10 +6,13 @@
 
 int m = 0;
 int n = 0;
+int max = 0;
 Console.WriteLine("Enter M:");
 int.TryParse(Console.ReadLine(), out m);
 Console.WriteLine("Enter N:");
 int.TryParse(Console.ReadLine(), out n);
+Console.WriteLine("Enter Max:");
+int.TryParse(Console.ReadLine(), out max);
 
 int[,] CreateMatrixRnd (int m, int n, int min, int max)
 {
@@ -63,7 +66,7 @@ void PrintArray(int[] array)
     
 }
 
-int[,] array = CreateMatrixRnd(m, n, 0, 10);
+int[,] array = CreateMatrixRnd(m, n, 0, max);
 PrintArray2D(array);
-int[] resarray = CheckMatrix(array, 10);
+int[] resarray = CheckMatrix(array, max);
 PrintArray(resarray);
