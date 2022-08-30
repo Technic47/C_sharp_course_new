@@ -37,11 +37,11 @@ void PrintArray(int[,] array)
 }
 
 void ChangeArray(int[,] array)
-{
-    int temp = 0;
+{    
+    int n = array.GetLength(1);
     for (int j = 0; j < n; j++)
     {
-        temp = array[0, j];
+        int temp = array[0, j];
         array[0, j] = array[n - 1, j];
         array[n - 1, j] = temp;
     }

@@ -44,12 +44,12 @@ void ChangeArray(int[,] array)
         Console.WriteLine("Unable to change Matrix!");
         return;
     }
-    int temp = 0;
+    
     for (int i = 0; i < m; i++)
     {
         for (int j = i + 1; j < n; j++)
         {
-            temp = array[i, j];
+            int temp = array[i, j];
             array[i, j] = array[j, i];
             array[j, i] = temp;
         }
