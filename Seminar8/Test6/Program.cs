@@ -61,24 +61,24 @@ int[] CheckMin(int[,] array)
         return mincoord;
 }
 
-void DeleteCross(int[,]array, int[] mincoord)
+int[,] DeleteCross(int[,]array, int[] mincoord)
 {
-    int[,] newArray = new int[m-1,n-1];
-        for (int i = 0; i < newArray.GetLength(0); i++)
+    int[,] newArray = new int[m,n];
+        for (int i = 0; i < newArray.GetLength(0)-1; i++)
         {
-            for (int j = 0; j < newArray.GetLength(1); j++)
+            for (int j = 0; j < newArray.GetLength(1)-1; j++)
             {
-                if(i = mincoord[0])
-                newArray[i,j] == array[i,j];
+                if(i == mincoord[0]) i++;
+                if(j == mincoord[1]) j++;
+                newArray[i,j] = array[i,j];
             }
             
         }
+    return newArray;
 }
 
 int[,] array = CreateMatrixRnd(m, n, 0, 20);
 PrintArray2D(array);
 int[] mincoord = CheckMin(array);
-for (int i=0;i<mincoord.Length; i++)
-{
-    Console.Write($"{mincoord[i]} ");
-}
+int[,] newarray = DeleteCross(array, mincoord);
+PrintArray2D(newarray);
